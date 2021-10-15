@@ -11,9 +11,6 @@ app.get('/', (req, res) => {
 
 app.get('/getSolendUserDepositBalance', getSolendUserDepositBalance);
 
-app.listen(port, () => {
-  if (port === 3000) {
-    console.log('true')
-  }
+app.listen(process.env.PORT || 3000, () => {
   console.log(`server is listening on ${port} !!!`);
 });
